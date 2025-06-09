@@ -86,7 +86,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                             className: 'font-bold',
                         }}
                     >
-                        Posts
+                        Conventions
                     </Link>{' '}
                     <Link
                         to='/users'
@@ -94,7 +94,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                             className: 'font-bold',
                         }}
                     >
-                        Users
+                        Celebrities
                     </Link>{' '}
                     <Link
                         to='/route-a'
@@ -102,9 +102,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                             className: 'font-bold',
                         }}
                     >
-                        Pathless Layout
+                        Fandom
                     </Link>{' '}
-                    <Link
+                    {/* <Link
                         to='/deferred'
                         activeProps={{
                             className: 'font-bold',
@@ -120,7 +120,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                         }}
                     >
                         This Route Does Not Exist
-                    </Link>
+                    </Link> */}
                 </div>
                 <hr />
                 {children}
