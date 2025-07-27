@@ -15,7 +15,7 @@
         "module": "ESNext",
         "moduleResolution": "Bundler",
         "paths": {
-            "~/*": ["./src/*"]
+            "@/*": ["./src/*"]
         },
         "resolveJsonModule": true,
         "declaration": true,
@@ -34,6 +34,6 @@
         "jsx": "react-jsx",
         "lib": ["DOM", "DOM.Iterable", "ES6"],
         "target": "es6",
-        "skipLibCheck": true,
+        "skipLibCheck": true
     }
 }

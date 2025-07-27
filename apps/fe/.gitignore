@@ -17,7 +17,7 @@ yarn.lock
 # Sentry Config File
 .env.sentry-build-plugin
 /test-results/
-/playwright-report/
+/playwright-report/vi
 /blob-report/
 /playwright/.cache/
 

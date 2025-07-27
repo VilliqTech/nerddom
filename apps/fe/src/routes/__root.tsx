@@ -3,12 +3,12 @@ import * as React from 'react';
 import { createRootRoute, HeadContent, Link, Outlet, Scripts } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { createServerFn } from '@tanstack/react-start';
+import { Navbar } from '@/components/Navigation/Navbar';
 import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary';
 import { NotFound } from '../components/NotFound';
 import appCss from '../styles/app.css?url';
 import { seo } from '../utils/seo';
 import { getSupabaseServerClient } from '../utils/supabase';
-import { Navbar } from '~/components/Navigation/Navbar';
 
 const fetchUser = createServerFn({ method: 'GET' }).handler(async () => {
     const supabase = await getSupabaseServerClient();
@@ -91,7 +91,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     const { user } = Route.useRouteContext();
 
     return (
-        <html>
+        <html lang='en' suppressHydrationWarning>
             <head>
                 <HeadContent />
             </head>
@@ -100,9 +100,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                 <div className='relative flex min-h-screen flex-col bg-background'>
                     {/* Navigation Header */}
                     <header className='sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
-                        <div className='container flex h-14 max-w-screen-2xl items-center'>
-                            <Navbar />
-                        </div>
+                        <Navbar />
                     </header>
 
                     {/* Main Content Area */}
