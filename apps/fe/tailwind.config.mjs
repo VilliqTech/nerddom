@@ -1,9 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: ['class'],
-    content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    content: ['./src/**/*.{js,jsx,ts,tsx}', './index.html'],
     plugins: [require('tailwindcss-animate')],
     theme: {
+        container: {
+            center: true,
+            padding: '2rem',
+            screens: {
+                '2xl': '1400px',
+            },
+        },
         extend: {
             borderRadius: {
                 lg: 'var(--radius)',

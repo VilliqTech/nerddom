@@ -29,4 +29,12 @@ export default defineConfig({
         }),
         tanstackStart(),
     ],
+    css: {
+        postcss: './postcss.config.mjs',
+    },
+    resolve: {
+        alias: {
+            '~': '/src',
+        },
+    },
 });

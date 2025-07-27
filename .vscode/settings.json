@@ -1,0 +1,11 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "prettier.ignorePath": "/home/villiq/src/villiq/nerddom/apps/fe/.prettierignore",
+    "prettier.configPath": "/home/villiq/src/villiq/nerddom/apps/fe/.prettierrc",
+    "cSpell.words": [
+        "Nerddom",
+        "Supabase"
+    ]
+}

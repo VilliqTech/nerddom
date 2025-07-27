@@ -95,39 +95,32 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             <head>
                 <HeadContent />
             </head>
-            <body>
-                {/* <div className='p-2 flex gap-2 text-lg'>
-                    <Link
-                        to='/'
-                        activeProps={{
-                            className: 'font-bold',
-                        }}
-                        activeOptions={{ exact: true }}
-                    >
-                        Home
-                    </Link>{' '}
-                    <Link
-                        to='/posts'
-                        activeProps={{
-                            className: 'font-bold',
-                        }}
-                    >
-                        Posts
-                    </Link>
-                    <div className='ml-auto'>
-                        {user ? (
-                            <>
-                                <span className='mr-2'>{user.email}</span>
-                                <Link to='/logout'>Logout</Link>
-                            </>
-                        ) : (
-                            <Link to='/login'>Login</Link>
-                        )}
-                    </div>
-                </div> */}
-                <Navbar />
-                <hr />
-                {children}
+            <body className='min-h-screen bg-background font-sans antialiased'>
+                {/* Main App Layout */}
+                <div className='relative flex min-h-screen flex-col bg-background'>
+                    {/* Navigation Header */}
+                    <header className='sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
+                        <div className='container flex h-14 max-w-screen-2xl items-center'>
+                            <Navbar />
+                        </div>
+                    </header>
+
+                    {/* Main Content Area */}
+                    <main className='flex-1'>{children}</main>
+
+                    {/* Optional Footer */}
+                    {/* <footer className="border-t border-border/40">
+                        <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
+                            <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+                                <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+                                    Built with ❤️ using TanStack Start and Shadcn/ui
+                                </p>
+                            </div>
+                        </div>
+                    </footer> */}
+                </div>
+
+                {/* Development Tools */}
                 <TanStackRouterDevtools position='bottom-right' />
                 <Scripts />
             </body>
